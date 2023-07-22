@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body style="margin: 0; overflow: hidden;">
+        <div class="container">
+            <div id="info"><h1>Sample</h1></div>
+            <div id="product-info-container">
+                <div id="product-info"></div>
+            </div>
+            <button id="button"><span>Click Here</span></button>
+            <button id="exit">Exit</button>
+            <select name="Language" id="lang">
+                <option value="English">English</option>
+                <option value="Chinese">Chinese</option>
+            </select>
+        </div>
+
+        <a-scene
+            vr-mode-ui="enabled: false;"
+            loading-screen="enabled: false;"
+            renderer="logarithmicDepthBuffer: true;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            embedded
+        >
+        </a-scene>
+    </body>
+
+    <script>
+        const info = document.querySelector("#info");
+        const button = document.querySelector("#button");
+        const exit = document.querySelector('#exit');
+        const product_Info = document.querySelector('#product-info');
+
+        function fetchMarkerData() {
+            return fetch('contents/content.json')
+                .then(response => response.json())
+                .catch(error => {
+                    console.error('Error fetching marker data:', error);
+                    return [];
+                });
+        }
+
+        // Call the fetchMarkerData function to load marker data from content.json
+        fetchMarkerData().then(markers => {
+            // Get a reference to the A-Frame scene
+            const scene = document.querySelector("a-scene");
+
+            // Loop through the marker data and create a-marker elements
+            markers.forEach((marker) => {
+                // Create a new a-marker element
+                const markerEl = document.createElement("a-marker");
+
+                // Set the marker attributes
+                markerEl.setAttribute("type", "pattern");
+                markerEl.setAttribute("url", marker.patternUrl);
+
+                // Create a new a-entity element for the model
+                const modelEl = document.createElement("a-entity");
+                modelEl.setAttribute("gltf-model", marker.modelUrl);
+                modelEl.setAttribute("position", "0 -2 -1");
+                modelEl.setAttribute("scale", "0.5 0.5 0.5");
+                modelEl.setAttribute("rotation", "-90 -90 90");
+
+                markerEl.addEventListener("markerFound", () => {
+                    info.textContent = marker.info;
+                    info.style.display = "block";
+                    button.style.display = "block";
+                    product_Info.innerHTML = marker.content;
+                    product_Info.style.display = "block";
+                });
+
+                const activeMarkers = [];
+
+                button.addEventListener("click", () => {
+                    // Get the currently active marker element (if any)
+                    const activeMarker = activeMarkers.find(marker => marker.active);
+
+                    // If there is an active marker, remove it from the scene
+                    if (activeMarker) {
+                        scene.removeChild(activeMarker.markerEl);
+                        activeMarker.active = false;
+                    }
+
+                    // Add the marker to the scene
+                    scene.appendChild(markerEl);
+                });
+
+                exit.addEventListener("click", () => {
+                    info.style.display = "none";
+                    button.style.display = "none";
+                    product_Info.style.display = "none";
+
+                    // Remove all active markers from the scene
+                    activeMarkers.forEach(marker => {
+                        scene.removeChild(marker.markerEl);
+                    });
+
+                    // Clear the activeMarkers array
+                    activeMarkers.length = 0;
+                });
+            });
+        });
+    </script>
+</html>
