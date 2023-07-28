@@ -6,8 +6,9 @@
 #product-info-container {
     position: absolute;
     top: 25%;
-    left: 5%;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
 #info {
@@ -47,6 +48,7 @@
     width: 300px;
     height: 600px;
     display: none;
+    z-index: 1;
 }
 
 #lang {
@@ -61,4 +63,21 @@
 .p {
     position: absolute;
     width: 100px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 1;
+}
+
+.navigation {
+    display: flex;
+}
+
+.bottom button {
+    margin: 0 10px;
 }

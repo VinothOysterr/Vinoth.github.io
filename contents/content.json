@@ -1,14 +1,16 @@
 [
     {
         "info": "CAR",
-        "patternUrl": "assets/patterns/marker.patt",
-        "modelUrl": "assets/models/asset.gltf",
-        "content": "<h2>Exterior Design:</h2><p>The Audi A8 features a sleek and sophisticated exterior design with clean lines,</p><p>a prominent grille, and distinctive LED headlights.It has a bold and commanding presence,</p><p>yet the overall styling is understated and elegant.</p>"
+        "patternUrl": "assets/patterns/sample.patt",
+        "modelUrl": "assets/models/sample.gltf",
+        "imgUrl": "assets/sample.png",
+        "contentFile": "sample.html"
     },
     {
         "info": "COMPASS",
-        "patternUrl": "assets/patterns/pattern-compass_img.patt",
+        "patternUrl": "assets/patterns/compass.patt",
         "modelUrl": "assets/models/compass/scene.gltf",
-        "content": "<h2>car-2 Exterior Design:</h2>,"
+        "imgUrl": "assets/compass.png",
+        "contentFile": "compass.html"
     }
 ]
