@@ -7,6 +7,10 @@
     --primary-light: #8abdff;
     --primary: #6d5dfc;
     --primary-dark: #5b0eeb;
+
+    --exit-light: #ffa898;
+    --exit: #b84c39;
+    --exit-dark: #440a00;
   
     --white: #FFFFFF;
     --greyLight-1: #E4EBF5;
@@ -130,4 +134,33 @@ p {
 
 .btn span {
   font-size: 1rem;
+}
+
+.exit {
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    /* margin-top: 2rem; */
+    box-shadow: 0.2rem 0.2rem 0.01rem var(--greyLight-2), -0.1rem -0.1rem 0.01rem var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+}
+
+.btn__exit {
+    background: var(--exit);
+    box-shadow: inset 0.1rem 0.1rem 0.1rem var(--exit-light), inset -0.1rem -0.1rem 0.1rem var(--exit-dark), 0.01rem 0.01rem 0.1rem var(--greyLight-2), -0.01rem -0.01rem 0.1rem var(--white);
+    color: var(--greyLight-1);
+}
+
+.btn__exit:hover {
+    color: var(--white);
+}
+
+.btn__exit:active {
+    /* Use the inner-shadow variable here */
+    box-shadow: inset 0.1rem 0.1rem 0.1rem var(--exit-dark), inset -0.1rem -0.1rem 0.1rem var(--exit-light);
 }
