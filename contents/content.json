@@ -1,16 +1,22 @@
 [
     {
-        "info": "CAR",
+        "info": "SAMPLE",
         "patternUrl": "assets/patterns/sample.patt",
         "modelUrl": "assets/models/sample.gltf",
         "imgUrl": "assets/sample.png",
-        "contentFile": "sample.html"
+        "contentFiles": {
+            "en": "contents/English/car.html",
+            "zh": "contents/Chinese/car.html"
+        }
     },
     {
         "info": "COMPASS",
         "patternUrl": "assets/patterns/compass.patt",
         "modelUrl": "assets/models/compass/scene.gltf",
         "imgUrl": "assets/compass.png",
-        "contentFile": "compass.html"
+        "contentFiles": {
+            "en": "contents/English/compass.html",
+            "zh": "contents/Chinese/compass.html"
+        }
     }
 ]
