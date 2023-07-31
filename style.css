@@ -63,7 +63,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 90vw;
-    height: 90vh;
+    height: 85vh;
     display: none;
     z-index: 1;
 }
