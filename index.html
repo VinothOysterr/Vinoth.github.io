@@ -14,12 +14,6 @@
                 <div id="product-info"></div>
             </div>
             <button id="button" class="btn btn__primary"><span>Scan Marker</span></button>
-            <div class="bottom">
-                <div class="navigation" id="navigation">
-                    <button id="previousBtn" class="btn btn__primary"><span>Previous</span></button>
-                    <button id="nextBtn" class="btn btn__primary"><span>Next</span></button>
-                </div>
-            </div>
             <button id="exit" class="exit btn__exit"><span>Exit</span></button>
             <select name="Language" id="lang" class="select btn__primary">
                 <option value="en">English</option>
@@ -40,14 +34,10 @@
             const info = document.querySelector("#info");
             const exit = document.querySelector("#exit");
             const product_Info = document.querySelector("#product-info");
-            const previousBtn = document.querySelector("#previousBtn");
-            const nextBtn = document.querySelector("#nextBtn");
             const langSelect = document.querySelector("#lang");
             
             info.style.display = "none";
             lang.style.display = "none";
-            previousBtn.style.display = "none";
-            nextBtn.style.display = "none";
             product_Info.style.display = "none";
             exit.style.display = "none";
             
@@ -96,8 +86,6 @@
                         markerDetected = false;
                         info.style.display = "none";
                         lang.style.display = "none";
-                        previousBtn.style.display = "none";
-                        nextBtn.style.display = "none";
                         product_Info.style.display = "none";
                         exit.style.display = "none";
                         button.style.display = "block";
@@ -121,8 +109,6 @@
                         info.textContent = marker.info;
                         info.style.display = "block";
                         lang.style.display = "block";
-                        previousBtn.style.display = "block";
-                        nextBtn.style.display = "block";
                         exit.style.display = "block";
                         product_Info.style.display = "block";
                         showContent(selectedLanguage); // Load content based on selected language.
