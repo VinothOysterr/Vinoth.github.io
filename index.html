@@ -9,7 +9,12 @@
     
     <body style="margin: 0; overflow: hidden;">
         <div class="container">
-            <div id="info"><h1>Sample</h1></div>
+            <div class="top">
+                <div id="info">
+                    <h1>Sample</h1>
+                </div>
+                <div id="img"></div>
+            </div>
             <div id="product-info-container">
                 <div id="product-info"></div>
             </div>
@@ -32,6 +37,7 @@
     
         <script>
             const info = document.querySelector("#info");
+            const pic = document.getElementById('img');
             const exit = document.querySelector("#exit");
             const product_Info = document.querySelector("#product-info");
             const langSelect = document.querySelector("#lang");
@@ -56,6 +62,10 @@
             
             function updateProductInfo(content) {
                 product_Info.innerHTML = content;
+            }
+
+            function updateImage(imageUrl) {
+                pic.innerHTML = `<img src="${imageUrl}" alt="Image">`;
             }
             
             function fetchMarkerData() {
@@ -85,6 +95,7 @@
                     if (markerDetected) {
                         markerDetected = false;
                         info.style.display = "none";
+                        pic.style.display = "none";
                         lang.style.display = "none";
                         product_Info.style.display = "none";
                         exit.style.display = "none";
@@ -107,7 +118,9 @@
                     if (!markerDetected) {
                         markerDetected = true;
                         info.textContent = marker.info;
+                        updateImage(marker.imgUrl);
                         info.style.display = "block";
+                        pic.style.display = "block";
                         lang.style.display = "block";
                         exit.style.display = "block";
                         product_Info.style.display = "block";

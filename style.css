@@ -22,30 +22,32 @@
 
 #product-info-container {
     position: absolute;
-    top: 10%;
+    top: 12%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+}
+
+.top {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    top: 5%;
 }
 
 #info {
-    position: absolute;
-    top: 5%;
+    top: 10%;
     left: 50%;
-    transform: translateX(-50%);
     z-index: 1;
-    display: none;
+    text-align: left;
+    padding-right: 20px;
+    color: var(--white);
 }
 
-.img {
-    position: absolute;
-    top: 5%;
-    left: 50%;
+#img {
     width: 50px;
-    max-width: 80px; /* Adjust the width as needed */
     height: 50px;
-    display: block;
-    margin: 0 auto;
+    padding-left: 20px;
     z-index: 1;
 }
 
