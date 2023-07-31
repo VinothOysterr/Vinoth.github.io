@@ -3,7 +3,7 @@
         "info": "SAMPLE",
         "patternUrl": "assets/patterns/sample.patt",
         "modelUrl": "assets/models/sample.gltf",
-        "imgUrl": "assets/sample.png",
+        "imgUrl": "assets/pictures/T-rex.jpg",
         "contentFiles": {
             "en": "contents/English/car.html",
             "zh": "contents/Chinese/car.html"
@@ -13,7 +13,7 @@
         "info": "COMPASS",
         "patternUrl": "assets/patterns/compass.patt",
         "modelUrl": "assets/models/compass/scene.gltf",
-        "imgUrl": "assets/compass.png",
+        "imgUrl": "assets/pictures/compass.jpg",
         "contentFiles": {
             "en": "contents/English/compass.html",
             "zh": "contents/Chinese/compass.html"
