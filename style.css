@@ -22,36 +22,27 @@
 
 #product-info-container {
     position: absolute;
-    top: 12%;
+    top: 8%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
 }
 
-.top {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    top: 5%;
-}
-
 #info {
-    top: 10%;
+    position: absolute;
+    top: 5%;
     left: 50%;
     z-index: 1;
-    text-align: left;
-    padding-right: 20px;
     color: var(--white);
 }
 
-#img {
-    width: 50px;
-    height: 50px;
-    padding-left: 20px;
-    z-index: 1;
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.T-rex {
+.content {
     display: flex;
     flex-direction: column;
 }
@@ -96,7 +87,7 @@ img {
     transform: translateX(-50%);
     bottom: 10px;
     width: 90vw;
-    height: 90vh;
+    height: 85vh;
     display: none;
     z-index: 1;
 }
