@@ -18,5 +18,15 @@
             "en": "contents/English/compass.html",
             "zh": "contents/Chinese/compass.html"
         }
+    },
+    {
+        "info": "DOBERMAN",
+        "patternUrl": "assets/patterns/doberman.patt",
+        "modelUrl": "assets/models/compass/scene.gltf",
+        "imgUrl": "assets/pictures/dob.jpg",
+        "contentFiles": {
+            "en": "contents/English/doberman.html",
+            "zh": "contents/Chinese/doberman.html"
+        }
     }
 ]
