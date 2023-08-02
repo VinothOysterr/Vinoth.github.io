@@ -16,6 +16,10 @@
     --greyDark2: #8e97ac;
 }
 
+body {
+    overflow: hidden;
+}
+
 #product-info-container {
     position: absolute;
     display: flex;
