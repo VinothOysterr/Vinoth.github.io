@@ -213,6 +213,7 @@ p {
     font-size: medium;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--txt-clr);
+    text-indent: 3em;
 }
 
 p::first-line {
