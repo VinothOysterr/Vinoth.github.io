@@ -96,7 +96,7 @@ img {
     transform: translateX(-50%);
     bottom: 10px;
     width: 90vw;
-    height: 80vh;
+    height: 75vh;
     display: none;
     z-index: 1;
 }
