@@ -183,6 +183,7 @@ img {
     width: 90px;
     transform: translateX(50%);
     z-index: 1;
+    font-size: 15px;
 
     height: 2rem;
     border-radius: 1rem;
