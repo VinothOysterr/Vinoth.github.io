@@ -14,6 +14,11 @@
     --greyLight-3: #bec8e4;
     --greyDark: #9baacf;
     --greyDark2: #8e97ac;
+
+    --button-height: 14px;
+    --button-color-play: #2ecc71;
+    --button-color-pause: #f1c40f;
+    --background-color: #34495e;
 }
 
 body {
@@ -129,7 +134,7 @@ img {
 }
 
 .btn {
-    width: 10rem;
+    width: 6rem;
     height: 2rem;
     border-radius: 1rem;
     margin-top: 2rem;
@@ -220,37 +225,6 @@ p::first-line {
     padding-left: 70px;
 }
 
-label {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+a-scene canvas {
+    cursor: default !important;
 }
-
-label span{
-    display: flex;
-    position: absolute;
-    font: 500 2em/1.2 "Oswald";
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 0;
-    margin: 0 auto;
-    text-shadow: 0 0 80px rgba(255, 255, 255, .5);
-    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: aitf 80s linear infinite;
-    -webkit-transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-}
-
-/* Animate Background Image */
-@keyframes aitf {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-}
-  
