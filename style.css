@@ -108,11 +108,11 @@ img {
     width: 6rem;
     height: 2rem;
     border-radius: 1rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     box-shadow: 0.2rem 0.2rem 0.1rem var(--greyLight-2), -0.1rem -0.1rem 0.1rem var(--white);
     display: flex;
-    align-items: right;
-    justify-content: right;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: 0.3s ease;
     border: none;
