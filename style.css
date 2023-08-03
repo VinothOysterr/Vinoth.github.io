@@ -37,10 +37,11 @@ body {
 
 #info {
     position: absolute;
-    top: 5%;
+    top: 3%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    font-size: x-large;
     color: var(--txt-clr);
 }
 
