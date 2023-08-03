@@ -69,32 +69,13 @@ img {
     align-content: center;
 }
 
-#button {
-    font-size: 14px;
-    margin: 5px;
-    position: absolute;
-    bottom: 1px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-#exit {
-    font-size: 14px;
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
 #product-info {
     position: absolute;
     overflow: auto;
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10px;
+    /* bottom: 5%; */
     width: 90vw; 
     height: 80vh;
     display: none;
@@ -116,14 +97,22 @@ img {
 }
 
 .btn {
+    font-size: 14px;
+    margin: 5px;
+    position: absolute;
+    bottom: 1px;
+    right: 5px;
+    transform: translateX(-50%);
+    z-index: 1;
+
     width: 6rem;
     height: 2rem;
     border-radius: 1rem;
     margin-top: 2rem;
     box-shadow: 0.2rem 0.2rem 0.1rem var(--greyLight-2), -0.1rem -0.1rem 0.1rem var(--white);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: right;
+    justify-content: right;
     cursor: pointer;
     transition: 0.3s ease;
     border: none;
@@ -149,6 +138,13 @@ img {
 }
 
 .exit {
+    font-size: 14px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transform: translateX(-50%);
+    z-index: 1;
+
     width: 3rem;
     height: 2rem;
     border-radius: 1rem;
